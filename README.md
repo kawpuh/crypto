@@ -16,8 +16,11 @@ https://en.wikipedia.org/wiki/Elliptic-curve_cryptography#Theory
 
 https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/
 
+#### Setup
+We define a curve
+
 $$ y^{2}=x^{3}+ax+b $$
 
-over a [finite field](https://en.wikipedia.org/wiki/Finite_field) (specifically one of integers mod $p$ where $p$ is prime) along with an addition operation as described [here](https://en.wikipedia.org/wiki/Elliptic_curve#The_group_law). This addition operation is used to create our point multiplication operation which is the backbone of ecc and described in greater detail [here](https://en.wikipedia.org/wiki/Elliptic_curve_point_multiplication).
+over a [finite field](https://en.wikipedia.org/wiki/Finite_field) (specifically one of integers mod $p$ where $p$ is prime) along with an addition operation as described [here](https://en.wikipedia.org/wiki/Elliptic_curve#The_group_law). This addition operation is used to create our point multiplication operation which is the one-way function used in ecc and described in greater detail [here](https://en.wikipedia.org/wiki/Elliptic_curve_point_multiplication).
 #### Cryptographic Scheme
-- If we dot a known point with itself $n$ times to get a final point, there is no more efficient way to recover $n$ than by redoing the computation. This is known as the elliptic curve discrete logarithm problem (ECDLP).
+If we dot a initial point with itself $n$ times to get a final point, there is no more efficient way to recover $n$ than by redoing the computation. This is known as the elliptic curve discrete logarithm problem (ECDLP).
